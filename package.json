@@ -1,0 +1,36 @@
+{
+  "name": "beth-stack",
+  "author": {
+    "name": "Filip Vučemilović-Grgić",
+    "email": "filip.vucemilovic.grgic@gmail.com",
+    "url": "https://github.com/fvucemilo"
+  },
+  "description": "A opinionated hypermedia-driven architecture balancing developer experience and performance.",
+  "homepage": "https://the-beth-stack.fly.dev",
+  "license": "MIT",
+  "module": "src/index.tsx",
+  "type": "module",
+  "scripts": {
+    "db:push": "bunx drizzle-kit push:sqlite",
+    "db:studio": "bunx drizzle-kit studio",
+    "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run tw:dev\"",
+    "tw": "bunx tailwindcss -i ./src/styles.css -o ./tailwind-gen/styles.css",
+    "tw:dev": "bunx tailwindcss -i ./src/styles.css -o ./tailwind-gen/styles.css --watch"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "concurrently": "^8.2.0",
+    "drizzle-kit": "^0.19.12",
+    "tailwindcss": "^3.3.3",
+    "typed-html": "^3.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.5.2",
+    "@libsql/client": "^0.3.1",
+    "drizzle-orm": "^0.27.2",
+    "elysia": "^0.5.25"
+  }
+}
