@@ -13,6 +13,7 @@
   "scripts": {
     "db:push": "bunx drizzle-kit push:sqlite",
     "db:studio": "bunx drizzle-kit studio",
+    "db:seed": "bun ./src/db/seed.ts",
     "dev": "concurrently \"bun run --watch src/index.tsx\" \"bun run tw:dev\"",
     "tw": "bunx tailwindcss -i ./src/styles.css -o ./tailwind-gen/styles.css",
     "tw:dev": "bunx tailwindcss -i ./src/styles.css -o ./tailwind-gen/styles.css --watch"
@@ -29,8 +30,8 @@
   },
   "dependencies": {
     "@elysiajs/html": "^0.5.2",
-    "@libsql/client": "^0.3.1",
-    "drizzle-orm": "^0.27.2",
+    "@libsql/client": "^0.5.2",
+    "drizzle-orm": "^0.29.4",
     "elysia": "^0.5.25"
   }
 }
